@@ -18,8 +18,8 @@ SUBSCRIPTION_ID=$(az account show --query id --output tsv)
 echo "📋 Current subscription: $SUBSCRIPTION_ID"
 
 # You need to set these variables to match your environment
-RESOURCE_GROUP="rghack"  # Replace with your resource group
-SP_NAME="insurance-orchestrator-sp"
+RESOURCE_GROUP=""  #Fill Replace with your resource group
+SP_NAME="" #Fill Replace with a unique name for your service principal
 
 echo ""
 echo "2️⃣ Creating service principal (if needed)..."

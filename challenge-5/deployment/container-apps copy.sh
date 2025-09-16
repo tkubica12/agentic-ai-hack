@@ -3,7 +3,7 @@
 set -e
 
 RESOURCE_GROUP="" #FILL
-LOCATION="swedencentral" 
+LOCATION="swedencentral" # might need changing
 ACR_NAME="" #FILL
 IMAGE_NAME="insurance-orchestrator:latest"
 CONTAINER_APP_NAME="" #FILL
@@ -14,6 +14,9 @@ echo "🚀 Starting deployment to Azure Container Apps..."
 # Create resource group (if it doesn't exist)
 echo "📦 Ensuring resource group exists..."
 az group create --name $RESOURCE_GROUP --location $LOCATION
+
+# subscription ID
+SUBSCRIPTION_ID=$(az account show --query id --output tsv)
 
 # Build Docker image and push to ACR
 echo "🔨 Building and pushing Docker image to ACR..."
@@ -75,7 +78,7 @@ echo "🔐 Assigning permissions to managed identity..."
 az role assignment create \
   --assignee $PRINCIPAL_ID \
   --role "Cognitive Services User" \
-  --scope "/subscriptions/af26648a-f8fe-4c1e-ac30-98c4aea17ae2/resourceGroups/rghack"
+  --scope "/subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP"
 
 # Output info
 echo "✅ Container App '$CONTAINER_APP_NAME' created successfully!"
