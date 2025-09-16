@@ -108,7 +108,7 @@ A really important part of your system is to understand every part of it. For ob
 4. Now, let's try out our agent and understand what happens underneath. To perform such action, let's ask a question related to the policies our agent has available. Copy and paste the following message on your Playground:
 
 ```
-What are the most comprehensive insurance policies for cars?
+What are the most comprehensive insurance policies for cars according to the company policies?
 ```
 
 5. You should see a screen similar to this one:
