@@ -62,7 +62,7 @@ In Semantic Kernel's Concurrent Orchestration, [`tasks`](https://learn.microsoft
 
 #### Part 1 - Run your orchestrator locally
 
-1. **Run the helper script** for automated setup and testing:
+1. Open `challenge-5/deployment/local-test.sh` file and replace `RESOURCE_GROUP` value with your resource group name. **Run the helper script** for automated setup and testing:
 ```bash
 cd /workspaces/agentic-ai-hack/challenge-5/deployment
 ./local-test.sh
