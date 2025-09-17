@@ -146,12 +146,12 @@ Create environment and container app using the pushed image and set the same env
    --ingress 'external' --target-port 8000 \
    --registry-server $ACR_NAME.azurecr.io \
    --registry-username $ACR_USERNAME --registry-password $ACR_PASSWORD \
-   --env-vars "COSMOS_ENDPOINT=<your-cosmos-endpoint>" "COSMOS_KEY='<your-cosmos-key>'" \
-   "AI_FOUNDRY_PROJECT_ENDPOINT=<your-ai-foundry-endpoint>" "AZURE_OPENAI_DEPLOYMENT_NAME=<your-azure-openai-deployment-name>" \
-   "AZURE_OPENAI_KEY=<your-azure-openai-key>" "AZURE_OPENAI_ENDPOINT=<your-azure-openai-endpoint>" \
-   "CLAIM_REV_AGENT_ID=<your-claim-reviewer-agent-id>" \
-   "RISK_ANALYZER_AGENT_ID=<your-risk-analyzer-agent-id>" \
-   "POLICY_CHECKER_AGENT_ID=<your-policy-checker-agent-id>" 
+   --env-vars COSMOS_ENDPOINT="<your-cosmos-endpoint>" COSMOS_KEY="<your-cosmos-key>" \
+   AI_FOUNDRY_PROJECT_ENDPOINT="<your-ai-foundry-endpoint>" AZURE_OPENAI_DEPLOYMENT_NAME="<your-azure-openai-deployment-name>" \
+   AZURE_OPENAI_KEY="<your-azure-openai-key>" AZURE_OPENAI_ENDPOINT="<your-azure-openai-endpoint>" \
+   CLAIM_REV_AGENT_ID="<your-claim-reviewer-agent-id>" \
+   RISK_ANALYZER_AGENT_ID="<your-risk-analyzer-agent-id>" \
+   POLICY_CHECKER_AGENT_ID="<your-policy-checker-agent-id>" 
    ```
 
    Give permissions to the container app to access resources using a system assigned managed identity:
