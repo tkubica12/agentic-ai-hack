@@ -212,7 +212,7 @@
       "apiVersion": "2024-10-01",
       "name": "[format('{0}/{1}', variables('aiFoundryName'), 'gpt-4.1-mini')]",
       "sku": {
-        "capacity": 500,
+        "capacity": 200,
         "name": "GlobalStandard"
       },
       "properties": {
