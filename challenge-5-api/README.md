@@ -129,8 +129,8 @@ Response body (application/json):
    cd challenge-5-api && ./create-service-principal.sh
    ```
 
-   Copy the enviornment file from the root into the `deployment` folder
-   Then run the container with the necessary environment variables:
+   Copy the outputed variables and paste them in your local `.env` file.
+   Then, it's time to run the container with the necessary environment variables:
 
    ```bash
    # Source the .env file and run the Docker container
